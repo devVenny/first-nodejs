@@ -13,6 +13,7 @@ function login() {
   };
 
   fetch("/login", {
+    // REST API: 자원의 표현을 가지고 상태를 전달한다.
     method: "POST",
     headers: {
       "Content-Type": "application/json",
