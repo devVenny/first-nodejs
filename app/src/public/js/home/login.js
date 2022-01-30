@@ -23,5 +23,11 @@ function login() {
     .then((res) => {
       return res.json();
     })
-    .then(console.log);
+    .then((res) => {
+      if (res.success) {
+        location.href = "/";
+      } else {
+        alert(`${res.msg}`);
+      }
+    });
 }
