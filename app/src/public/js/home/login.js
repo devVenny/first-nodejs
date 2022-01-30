@@ -19,6 +19,9 @@ function login() {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(req),
-  });
-  // POST 요청을 받기위한 API 설정이 필요하다(app.post) like app.get
+  })
+    .then((res) => {
+      return res.json();
+    })
+    .then(console.log);
 }
